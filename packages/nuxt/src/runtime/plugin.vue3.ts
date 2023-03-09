@@ -1,8 +1,9 @@
 import { createPinia, setActivePinia } from 'pinia'
 import { defineNuxtPlugin } from '#app'
 
-export default defineNuxtPlugin((nuxtApp) => {
-  const pinia = createPinia()
+export const pinia = createPinia()
+
+export default defineNuxtPlugin((nuxtApp) => {  
   nuxtApp.vueApp.use(pinia)
   setActivePinia(pinia)
 
